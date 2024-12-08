@@ -4,6 +4,7 @@ public abstract class User {
     private String userId;
     private String name;
     private String contactInfo;
+    private static int totalUsers = 0;
 
     User(){
         userId = generateUniqueId();
@@ -29,8 +30,9 @@ public abstract class User {
         return userId;
     }
 
-    private String generateUniqueId(){
-        return "";
+    private final String generateUniqueId(){
+        totalUsers++;
+        return "Users-" + totalUsers;
     }
 
     public String getName() {
