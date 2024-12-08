@@ -5,8 +5,28 @@ public class User {
     private String name;
     private String contactInfo;
 
+    User(){
+        userId = generateUniqueId();
+    }
+
+    User(String name, String contactInfo){
+        userId = generateUniqueId();
+        this.name = name;
+        this.contactInfo = contactInfo;
+    }
+
+    User(User other){
+        this.name = other.name;
+        this.contactInfo = other.contactInfo;
+        this.userId = generateUniqueId();
+    }
+
     public String getUserId() {
         return userId;
+    }
+
+    private String generateUniqueId(){
+        return "";
     }
 
     public String getName() {
