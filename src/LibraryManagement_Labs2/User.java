@@ -1,6 +1,6 @@
 package LibraryManagement_Labs2;
 
-public class User {
+public abstract class User {
     private String userId;
     private String name;
     private String contactInfo;
@@ -20,6 +20,10 @@ public class User {
         this.contactInfo = other.contactInfo;
         this.userId = generateUniqueId();
     }
+
+    public abstract void displayDashboard();
+
+    public abstract boolean canBorrowBooks();
 
     public String getUserId() {
         return userId;
