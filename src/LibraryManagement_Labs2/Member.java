@@ -25,4 +25,9 @@ public class Member extends User{
     public boolean canBorrowBooks(){
         return borrowedBooksCount < MAX_BORROW_LIMIT;
     }
+
+    @Override
+    public void returnBook(){
+        borrowedBooksCount--;
+    }
 }

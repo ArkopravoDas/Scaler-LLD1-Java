@@ -26,6 +26,8 @@ public abstract class User {
 
     public abstract boolean canBorrowBooks();
 
+    public abstract void returnBook();
+
     public String getUserId() {
         return userId;
     }
