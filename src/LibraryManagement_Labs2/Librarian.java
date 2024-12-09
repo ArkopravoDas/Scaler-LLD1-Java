@@ -28,4 +28,10 @@ public class Librarian extends User{
     public void removeBook(Book book){
         System.out.println("Book Removed");
     }
+
+    @Override
+    public void returnBook() {
+        System.out.println("Book Returned");
+    }
+
 }
